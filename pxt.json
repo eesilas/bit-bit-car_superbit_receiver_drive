@@ -1,5 +1,6 @@
 {
     "name": "bit-bit-car_superbit_receiver_drive",
+    "version": "0.0.1",
     "description": "",
     "dependencies": {
         "core": "*",

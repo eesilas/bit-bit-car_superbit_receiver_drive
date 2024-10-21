@@ -12,7 +12,7 @@ function L () {
     SuperBit.enMotors.M4,
     -255
     )
-    basic.pause(500)
+    basic.pause(100)
     BB()
 }
 function spinleft () {
@@ -29,7 +29,6 @@ function spinleft () {
     SuperBit.enMotors.M4,
     255
     )
-    basic.pause(500)
     BB()
 }
 radio.onReceivedNumber(function (receivedNumber) {
@@ -38,13 +37,13 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.showArrow(ArrowNames.North)
     } else if (receivedNumber == 2) {
         L()
-        basic.showArrow(ArrowNames.West)
+        basic.showArrow(ArrowNames.East)
     } else if (receivedNumber == 3) {
         B()
         basic.showArrow(ArrowNames.South)
     } else if (receivedNumber == 4) {
         R()
-        basic.showArrow(ArrowNames.East)
+        basic.showArrow(ArrowNames.West)
     } else if (receivedNumber == 5) {
         SuperBit.MotorStopAll()
     } else if (receivedNumber == 6) {
@@ -78,7 +77,7 @@ function F () {
     SuperBit.enMotors.M4,
     255
     )
-    basic.pause(500)
+    basic.pause(100)
     BB()
 }
 function B () {
@@ -95,7 +94,7 @@ function B () {
     SuperBit.enMotors.M4,
     -255
     )
-    basic.pause(500)
+    basic.pause(100)
     BB()
 }
 function BB () {
@@ -124,7 +123,7 @@ function R () {
     SuperBit.enMotors.M4,
     255
     )
-    basic.pause(500)
+    basic.pause(100)
     BB()
 }
 function spinright () {
@@ -141,7 +140,6 @@ function spinright () {
     SuperBit.enMotors.M4,
     -255
     )
-    basic.pause(500)
     BB()
 }
 let strip: neopixel.Strip = null

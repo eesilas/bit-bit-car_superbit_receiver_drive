@@ -108,6 +108,8 @@ function BB () {
     basic.pause(200)
     strip.showColor(neopixel.colors(NeoPixelColors.Purple))
     basic.pause(200)
+    strip.showColor(neopixel.colors(NeoPixelColors.Red))
+    basic.pause(200)
 }
 function R () {
     basic.showArrow(ArrowNames.East)
@@ -143,16 +145,11 @@ function spinright () {
     BB()
 }
 let strip: neopixel.Strip = null
-radio.setGroup(13)
+radio.setGroup(121)
 basic.showIcon(IconNames.Yes)
-SuperBit.MotorStopAll()
 basic.showArrow(ArrowNames.North)
 strip = neopixel.create(DigitalPin.P12, 4, NeoPixelMode.RGB)
 let range = strip.range(0, 3)
 basic.forever(function () {
     basic.showIcon(IconNames.Angry)
-    SuperBit.Servo(SuperBit.enServo.S7, 0)
-    basic.pause(2000)
-    SuperBit.Servo(SuperBit.enServo.S7, 180)
-    basic.pause(2000)
 })
